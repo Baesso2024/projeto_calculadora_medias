@@ -3,7 +3,7 @@ const imgAprovado = '<img src="./images/aprovado.png" alt="Emoji celebrando" />'
 const imgReprovado = '<img src="./images/reprovado.png" alt="Emoji decepcionado" />';
 const atividades = [];
 const notas = [];
-const notaMinima = parseFloat(prompt("Digite a nota mínima:"));
+const notaMinima = parseFloat(prompt("Digite qual a nota média que o aluno precisa ter:"));
 
 let linhas = '';
 
