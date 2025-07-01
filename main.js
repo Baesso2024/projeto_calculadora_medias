@@ -21,7 +21,7 @@ function adicionaLinha() {
 
     // 🔹 Padroniza o nome: remove espaços e coloca em minúsculas
     const nomeAtividade = inputNomeAtividade.value.trim().toLowerCase();
-    const notaAtividade = parseFloat(inputNotaAtividade.value);
+    const notaAtividade = parseFloat(inputNotaAtividade.value.replace(',', '.'));
 
     // 🔒 Verifica se essa atividade já foi inserida
     if (atividades.includes(nomeAtividade)) {
