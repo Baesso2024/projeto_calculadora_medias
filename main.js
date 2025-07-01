@@ -4,14 +4,18 @@ const imgReprovado = '<img src="./images/reprovado.png" alt="Emoji decepcionado"
 const atividades = [];
 const notas = [];
 
-let notaMinima;
+let notaMinima = null;
 
-// 🔐 Valida entrada do usuário até ser um número válido entre 0 e 10
-do {
+while (notaMinima === null || isNaN(notaMinima) || notaMinima < 4 || notaMinima > 10) {
     const entrada = prompt("Digite qual a nota média que o aluno precisa ter (entre 4 e 10):");
-    notaMinima = parseFloat(entrada.replace(',', '.'));
-} while (isNaN(notaMinima) || notaMinima < 4 || notaMinima > 10);
 
+    if (entrada === null) {
+        alert("Você precisa digitar uma nota entre 4 e 10 para continuar.");
+        continue; // força repetir se clicou em cancelar
+    }
+
+    notaMinima = parseFloat(entrada.replace(',', '.'));
+}
 
 let linhas = '';
 
